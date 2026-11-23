@@ -1,0 +1,36 @@
+{
+  "before": {
+    "backdropZ": "1040",
+    "closeReceivesClick": false,
+    "panelZ": "1020",
+    "topClass": "offcanvas-backdrop fade show"
+  },
+  "after": {
+    "backdropZ": "1040",
+    "closeReceivesClick": true,
+    "panelZ": "1045",
+    "topClass": "ti ti-x"
+  },
+  "workspaceResize": {
+    "backdrops": 0,
+    "bodyOverflow": "",
+    "panelShown": false
+  },
+  "publicResize": {
+    "backdrops": 0,
+    "bodyOverflow": ""
+  },
+  "widths": [
+    320,
+    800,
+    992,
+    1200
+  ],
+  "verified": [
+    "trabajador enlaces/cierre/logout",
+    "administrador enlace Clientes a320px",
+    "publico enlace categoria/click fondo/resize992",
+    "cliente cierreEscape"
+  ],
+  "data": "QA aislado en memoria; sin modificar BD real"
+}

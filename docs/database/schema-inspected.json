@@ -1,0 +1,3348 @@
+{
+  "tables": [
+    {
+      "TABLE_NAME": "categoria_producto",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "compra",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "migracion_web",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "producto",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "receta",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "rol",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "sesion_web",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "transferencia_validada",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "ENGINE": "InnoDB"
+    },
+    {
+      "TABLE_NAME": "venta",
+      "ENGINE": "InnoDB"
+    }
+  ],
+  "columns": [
+    {
+      "TABLE_NAME": "categoria_producto",
+      "COLUMN_NAME": "id_categoria",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "categoria_producto",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(50)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "categoria_producto",
+      "COLUMN_NAME": "descripcion",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "categoria_producto",
+      "COLUMN_NAME": "activo",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "categoria_producto",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "compra",
+      "COLUMN_NAME": "id_compra",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "compra",
+      "COLUMN_NAME": "id_proveedor",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "compra",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "compra",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "compra",
+      "COLUMN_NAME": "total",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0.00",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "compra",
+      "COLUMN_NAME": "estado",
+      "COLUMN_TYPE": "enum('Pendiente','Recibida','Cancelada')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "Pendiente",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "compra",
+      "COLUMN_NAME": "observaciones",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "compra",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "COLUMN_NAME": "id_config",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "COLUMN_NAME": "banco",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "COLUMN_NAME": "titular",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "COLUMN_NAME": "clabe",
+      "COLUMN_TYPE": "char(18)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "COLUMN_NAME": "instrucciones",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "COLUMN_NAME": "id_detalle_compra",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "COLUMN_NAME": "id_compra",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "COLUMN_NAME": "id_ingrediente",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "COLUMN_NAME": "cantidad",
+      "COLUMN_TYPE": "decimal(12,3)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "COLUMN_NAME": "precio_unitario",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "COLUMN_NAME": "subtotal",
+      "COLUMN_TYPE": "decimal(12,2)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "STORED GENERATED",
+      "GENERATION_EXPRESSION": "(`cantidad` * `precio_unitario`)"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "COLUMN_NAME": "id_detalle_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "COLUMN_NAME": "id_producto",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "COLUMN_NAME": "cantidad",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "COLUMN_NAME": "precio_unitario",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "COLUMN_NAME": "subtotal",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "STORED GENERATED",
+      "GENERATION_EXPRESSION": "(`cantidad` * `precio_unitario`)"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "COLUMN_NAME": "id_detalle_receta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "COLUMN_NAME": "id_receta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "COLUMN_NAME": "id_ingrediente",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "COLUMN_NAME": "cantidad",
+      "COLUMN_TYPE": "decimal(12,3)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "COLUMN_NAME": "id_detalle_venta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "COLUMN_NAME": "id_venta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "COLUMN_NAME": "id_producto",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "COLUMN_NAME": "cantidad",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "COLUMN_NAME": "precio_unitario",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "COLUMN_NAME": "subtotal",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "STORED GENERATED",
+      "GENERATION_EXPRESSION": "(`cantidad` * `precio_unitario`)"
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "COLUMN_NAME": "id_devolucion",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "COLUMN_NAME": "importe",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "COLUMN_NAME": "metodo_pago",
+      "COLUMN_TYPE": "varchar(30)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "COLUMN_NAME": "motivo",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "COLUMN_NAME": "id_historial",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "COLUMN_NAME": "accion",
+      "COLUMN_TYPE": "varchar(50)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "COLUMN_NAME": "detalle",
+      "COLUMN_TYPE": "json",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "COLUMN_NAME": "id_ingrediente",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "COLUMN_NAME": "unidad",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "COLUMN_NAME": "existencia",
+      "COLUMN_TYPE": "decimal(12,3)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0.000",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "COLUMN_NAME": "stock_minimo",
+      "COLUMN_TYPE": "decimal(12,3)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0.000",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "COLUMN_NAME": "activo",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "id_intento",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "referencia",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "referencia_normalizada",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "importe",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "modalidad_pago",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "config_version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "destino_snapshot",
+      "COLUMN_TYPE": "json",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "cotizacion_version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "estado",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "Pendiente",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "motivo",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "id_revisor",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "id_pago",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "COLUMN_NAME": "fecha_revision",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "migracion_web",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "migracion_web",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "id_movimiento",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "id_ingrediente",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "cantidad",
+      "COLUMN_TYPE": "decimal(12,3)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "existencia_resultante",
+      "COLUMN_TYPE": "decimal(12,3)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "unidad",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "tipo",
+      "COLUMN_TYPE": "varchar(30)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "id_compra",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "id_venta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "motivo",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "id_movimiento",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "id_producto",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "cantidad",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "existencia_resultante",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "tipo",
+      "COLUMN_TYPE": "varchar(30)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "id_venta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "motivo",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "id_notificacion",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "id_destinatario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "id_evento",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "tipo",
+      "COLUMN_TYPE": "varchar(50)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "titulo",
+      "COLUMN_TYPE": "varchar(120)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "texto",
+      "COLUMN_TYPE": "varchar(500)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "leida",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "fecha_lectura",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "entidad",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "Pedido",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "id_origen",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "COLUMN_NAME": "clave_evento",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "COLUMN_NAME": "id_operacion",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "COLUMN_NAME": "clave",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "COLUMN_NAME": "accion",
+      "COLUMN_TYPE": "varchar(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "COLUMN_NAME": "huella",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "COLUMN_NAME": "resultado",
+      "COLUMN_TYPE": "json",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "id_pago",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "id_venta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "importe",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "metodo_pago",
+      "COLUMN_TYPE": "varchar(30)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "referencia",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "devuelto",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pago",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "id_cliente",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "id_trabajador",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "fecha_pedido",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "fecha_entrega",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "estado",
+      "COLUMN_TYPE": "enum('Pendiente','En progreso','Listo','Despachado','Cancelado')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "Pendiente",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "total",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0.00",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "anticipo",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0.00",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "observaciones",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "tipo",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "Catalogo",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "descripcion_personalizada",
+      "COLUMN_TYPE": "text",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "fecha_solicitada",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "motivo_retraso",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "cotizacion_estado",
+      "COLUMN_TYPE": "varchar(30)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "No aplica",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "cotizacion_version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "aceptada_version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "aceptada_fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "politica_pago",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "modalidad_pago",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "aceptacion_estado",
+      "COLUMN_TYPE": "varchar(40)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "Aceptado",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "aceptado_por",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "aceptado_fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "COLUMN_NAME": "cotizacion_checkout_hash",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "id_producto",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "id_categoria",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "descripcion",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "precio",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "existencia",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "stock_minimo",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "0",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "unidad",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": "pieza",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "activo",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "imagen",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "producto",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "COLUMN_NAME": "id_proveedor",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "COLUMN_NAME": "telefono",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "COLUMN_NAME": "correo",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "COLUMN_NAME": "direccion",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "COLUMN_NAME": "activo",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "receta",
+      "COLUMN_NAME": "id_receta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "receta",
+      "COLUMN_NAME": "id_producto",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "receta",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "receta",
+      "COLUMN_NAME": "descripcion",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "receta",
+      "COLUMN_NAME": "rendimiento",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "receta",
+      "COLUMN_NAME": "activo",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "receta",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "COLUMN_NAME": "id_referencia",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "COLUMN_NAME": "archivo",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "COLUMN_NAME": "hash_original",
+      "COLUMN_TYPE": "char(64)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "COLUMN_NAME": "activo",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "rol",
+      "COLUMN_NAME": "id_rol",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "rol",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(50)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "rol",
+      "COLUMN_NAME": "descripcion",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "sesion_web",
+      "COLUMN_NAME": "session_id",
+      "COLUMN_TYPE": "varchar(128)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "sesion_web",
+      "COLUMN_NAME": "expires",
+      "COLUMN_TYPE": "int unsigned",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "sesion_web",
+      "COLUMN_NAME": "data",
+      "COLUMN_TYPE": "mediumtext",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "transferencia_validada",
+      "COLUMN_NAME": "referencia_normalizada",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "transferencia_validada",
+      "COLUMN_NAME": "id_pago",
+      "COLUMN_TYPE": "bigint",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "transferencia_validada",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "id_rol",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "nombre",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "correo",
+      "COLUMN_TYPE": "varchar(100)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "contrasena_hash",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "telefono",
+      "COLUMN_TYPE": "varchar(20)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "direccion",
+      "COLUMN_TYPE": "varchar(255)",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "activo",
+      "COLUMN_TYPE": "tinyint(1)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "fecha_registro",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "COLUMN_NAME": "version",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "1",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "venta",
+      "COLUMN_NAME": "id_venta",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "PRI",
+      "EXTRA": "auto_increment",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "venta",
+      "COLUMN_NAME": "id_usuario",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "venta",
+      "COLUMN_NAME": "id_pedido",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "UNI",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "venta",
+      "COLUMN_NAME": "fecha",
+      "COLUMN_TYPE": "datetime",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "CURRENT_TIMESTAMP",
+      "COLUMN_KEY": "",
+      "EXTRA": "DEFAULT_GENERATED",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "venta",
+      "COLUMN_NAME": "total",
+      "COLUMN_TYPE": "decimal(10,2)",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "venta",
+      "COLUMN_NAME": "metodo_pago",
+      "COLUMN_TYPE": "enum('Efectivo','Tarjeta','Transferencia','Mixto')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "venta",
+      "COLUMN_NAME": "estado",
+      "COLUMN_TYPE": "enum('Pagada','Cancelada')",
+      "IS_NULLABLE": "NO",
+      "COLUMN_DEFAULT": "Pagada",
+      "COLUMN_KEY": "",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    },
+    {
+      "TABLE_NAME": "venta",
+      "COLUMN_NAME": "id_cliente",
+      "COLUMN_TYPE": "int",
+      "IS_NULLABLE": "YES",
+      "COLUMN_DEFAULT": null,
+      "COLUMN_KEY": "MUL",
+      "EXTRA": "",
+      "GENERATION_EXPRESSION": ""
+    }
+  ],
+  "keys": [
+    {
+      "TABLE_NAME": "categoria_producto",
+      "CONSTRAINT_NAME": "nombre",
+      "COLUMN_NAME": "nombre",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "categoria_producto",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_categoria",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "compra",
+      "CONSTRAINT_NAME": "compra_ibfk_1",
+      "COLUMN_NAME": "id_proveedor",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "proveedor",
+      "REFERENCED_COLUMN_NAME": "id_proveedor"
+    },
+    {
+      "TABLE_NAME": "compra",
+      "CONSTRAINT_NAME": "compra_ibfk_2",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "compra",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_compra",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "CONSTRAINT_NAME": "config_bancaria_ibfk_1",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_config",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "CONSTRAINT_NAME": "version",
+      "COLUMN_NAME": "version",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "CONSTRAINT_NAME": "detalle_compra_ibfk_1",
+      "COLUMN_NAME": "id_compra",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "compra",
+      "REFERENCED_COLUMN_NAME": "id_compra"
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "CONSTRAINT_NAME": "detalle_compra_ibfk_2",
+      "COLUMN_NAME": "id_ingrediente",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "ingrediente",
+      "REFERENCED_COLUMN_NAME": "id_ingrediente"
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_detalle_compra",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "CONSTRAINT_NAME": "detalle_pedido_ibfk_1",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pedido",
+      "REFERENCED_COLUMN_NAME": "id_pedido"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "CONSTRAINT_NAME": "detalle_pedido_ibfk_2",
+      "COLUMN_NAME": "id_producto",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "producto",
+      "REFERENCED_COLUMN_NAME": "id_producto"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_detalle_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "CONSTRAINT_NAME": "detalle_receta_ibfk_1",
+      "COLUMN_NAME": "id_receta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "receta",
+      "REFERENCED_COLUMN_NAME": "id_receta"
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "CONSTRAINT_NAME": "detalle_receta_ibfk_2",
+      "COLUMN_NAME": "id_ingrediente",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "ingrediente",
+      "REFERENCED_COLUMN_NAME": "id_ingrediente"
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "CONSTRAINT_NAME": "id_receta",
+      "COLUMN_NAME": "id_receta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "CONSTRAINT_NAME": "id_receta",
+      "COLUMN_NAME": "id_ingrediente",
+      "ORDINAL_POSITION": 2,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_detalle_receta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "CONSTRAINT_NAME": "detalle_venta_ibfk_1",
+      "COLUMN_NAME": "id_venta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "venta",
+      "REFERENCED_COLUMN_NAME": "id_venta"
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "CONSTRAINT_NAME": "detalle_venta_ibfk_2",
+      "COLUMN_NAME": "id_producto",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "producto",
+      "REFERENCED_COLUMN_NAME": "id_producto"
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_detalle_venta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "CONSTRAINT_NAME": "devolucion_ibfk_1",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pedido",
+      "REFERENCED_COLUMN_NAME": "id_pedido"
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "CONSTRAINT_NAME": "devolucion_ibfk_2",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_devolucion",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "CONSTRAINT_NAME": "historial_pedido_ibfk_1",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pedido",
+      "REFERENCED_COLUMN_NAME": "id_pedido"
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "CONSTRAINT_NAME": "historial_pedido_ibfk_2",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_historial",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_ingrediente",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "id_pago",
+      "COLUMN_NAME": "id_pago",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_ibfk_1",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pedido",
+      "REFERENCED_COLUMN_NAME": "id_pedido"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_ibfk_2",
+      "COLUMN_NAME": "config_version",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "config_bancaria",
+      "REFERENCED_COLUMN_NAME": "version"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_ibfk_3",
+      "COLUMN_NAME": "id_revisor",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_ibfk_4",
+      "COLUMN_NAME": "id_pago",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pago",
+      "REFERENCED_COLUMN_NAME": "id_pago"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_intento",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "migracion_web",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "nombre",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_ibfk_1",
+      "COLUMN_NAME": "id_ingrediente",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "ingrediente",
+      "REFERENCED_COLUMN_NAME": "id_ingrediente"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_ibfk_2",
+      "COLUMN_NAME": "id_compra",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "compra",
+      "REFERENCED_COLUMN_NAME": "id_compra"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_ibfk_3",
+      "COLUMN_NAME": "id_venta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "venta",
+      "REFERENCED_COLUMN_NAME": "id_venta"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_ibfk_4",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_movimiento",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "CONSTRAINT_NAME": "movimiento_producto_ibfk_1",
+      "COLUMN_NAME": "id_producto",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "producto",
+      "REFERENCED_COLUMN_NAME": "id_producto"
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "CONSTRAINT_NAME": "movimiento_producto_ibfk_2",
+      "COLUMN_NAME": "id_venta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "venta",
+      "REFERENCED_COLUMN_NAME": "id_venta"
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "CONSTRAINT_NAME": "movimiento_producto_ibfk_3",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_movimiento",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "notificacion_ibfk_1",
+      "COLUMN_NAME": "id_destinatario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "notificacion_ibfk_2",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pedido",
+      "REFERENCED_COLUMN_NAME": "id_pedido"
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "notificacion_ibfk_3",
+      "COLUMN_NAME": "id_evento",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "historial_pedido",
+      "REFERENCED_COLUMN_NAME": "id_historial"
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_notificacion",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "uk_notificacion_evento",
+      "COLUMN_NAME": "id_evento",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "uk_notificacion_evento",
+      "COLUMN_NAME": "id_destinatario",
+      "ORDINAL_POSITION": 2,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "uk_notificacion_origen",
+      "COLUMN_NAME": "id_destinatario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "uk_notificacion_origen",
+      "COLUMN_NAME": "clave_evento",
+      "ORDINAL_POSITION": 2,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "CONSTRAINT_NAME": "operacion_ibfk_1",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_operacion",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "CONSTRAINT_NAME": "uk_operacion",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "CONSTRAINT_NAME": "uk_operacion",
+      "COLUMN_NAME": "clave",
+      "ORDINAL_POSITION": 2,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "pago_ibfk_1",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pedido",
+      "REFERENCED_COLUMN_NAME": "id_pedido"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "pago_ibfk_2",
+      "COLUMN_NAME": "id_venta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "venta",
+      "REFERENCED_COLUMN_NAME": "id_venta"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "pago_ibfk_3",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_pago",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "pedido_ibfk_1",
+      "COLUMN_NAME": "id_cliente",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "pedido_ibfk_2",
+      "COLUMN_NAME": "id_trabajador",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "uk_checkout_hash",
+      "COLUMN_NAME": "cotizacion_checkout_hash",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "producto",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_producto",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "producto",
+      "CONSTRAINT_NAME": "producto_ibfk_1",
+      "COLUMN_NAME": "id_categoria",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "categoria_producto",
+      "REFERENCED_COLUMN_NAME": "id_categoria"
+    },
+    {
+      "TABLE_NAME": "proveedor",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_proveedor",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "receta",
+      "CONSTRAINT_NAME": "id_producto",
+      "COLUMN_NAME": "id_producto",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "receta",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_receta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "receta",
+      "CONSTRAINT_NAME": "receta_ibfk_1",
+      "COLUMN_NAME": "id_producto",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "producto",
+      "REFERENCED_COLUMN_NAME": "id_producto"
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_referencia",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "CONSTRAINT_NAME": "referencia_pedido_ibfk_1",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pedido",
+      "REFERENCED_COLUMN_NAME": "id_pedido"
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "CONSTRAINT_NAME": "referencia_pedido_ibfk_2",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "rol",
+      "CONSTRAINT_NAME": "nombre",
+      "COLUMN_NAME": "nombre",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "rol",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_rol",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "sesion_web",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "session_id",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "transferencia_validada",
+      "CONSTRAINT_NAME": "id_pago",
+      "COLUMN_NAME": "id_pago",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "transferencia_validada",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "referencia_normalizada",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "transferencia_validada",
+      "CONSTRAINT_NAME": "transferencia_validada_ibfk_1",
+      "COLUMN_NAME": "id_pago",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pago",
+      "REFERENCED_COLUMN_NAME": "id_pago"
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "CONSTRAINT_NAME": "correo",
+      "COLUMN_NAME": "correo",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "CONSTRAINT_NAME": "usuario_ibfk_1",
+      "COLUMN_NAME": "id_rol",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "rol",
+      "REFERENCED_COLUMN_NAME": "id_rol"
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "fk_venta_cliente",
+      "COLUMN_NAME": "id_cliente",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "PRIMARY",
+      "COLUMN_NAME": "id_venta",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "uk_venta_pedido",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": null,
+      "REFERENCED_COLUMN_NAME": null
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "venta_ibfk_1",
+      "COLUMN_NAME": "id_usuario",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "usuario",
+      "REFERENCED_COLUMN_NAME": "id_usuario"
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "venta_ibfk_2",
+      "COLUMN_NAME": "id_pedido",
+      "ORDINAL_POSITION": 1,
+      "REFERENCED_TABLE_NAME": "pedido",
+      "REFERENCED_COLUMN_NAME": "id_pedido"
+    }
+  ],
+  "checks": [
+    {
+      "TABLE_NAME": "compra",
+      "CONSTRAINT_NAME": "compra_chk_1",
+      "CHECK_CLAUSE": "(`total` >= 0)"
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "CONSTRAINT_NAME": "detalle_compra_chk_1",
+      "CHECK_CLAUSE": "(`cantidad` > 0)"
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "CONSTRAINT_NAME": "detalle_compra_chk_2",
+      "CHECK_CLAUSE": "(`precio_unitario` >= 0)"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "CONSTRAINT_NAME": "detalle_pedido_chk_1",
+      "CHECK_CLAUSE": "(`cantidad` > 0)"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "CONSTRAINT_NAME": "detalle_pedido_chk_2",
+      "CHECK_CLAUSE": "(`precio_unitario` >= 0)"
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "CONSTRAINT_NAME": "detalle_receta_chk_1",
+      "CHECK_CLAUSE": "(`cantidad` > 0)"
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "CONSTRAINT_NAME": "detalle_venta_chk_1",
+      "CHECK_CLAUSE": "(`cantidad` > 0)"
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "CONSTRAINT_NAME": "detalle_venta_chk_2",
+      "CHECK_CLAUSE": "(`precio_unitario` >= 0)"
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "CONSTRAINT_NAME": "devolucion_chk_1",
+      "CHECK_CLAUSE": "(`importe` > 0)"
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "CONSTRAINT_NAME": "ingrediente_chk_1",
+      "CHECK_CLAUSE": "(`existencia` >= 0)"
+    },
+    {
+      "TABLE_NAME": "ingrediente",
+      "CONSTRAINT_NAME": "ingrediente_chk_2",
+      "CHECK_CLAUSE": "(`stock_minimo` >= 0)"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_chk_1",
+      "CHECK_CLAUSE": "(`importe` > 0)"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_chk_1",
+      "CHECK_CLAUSE": "(`existencia_resultante` >= 0)"
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "CONSTRAINT_NAME": "movimiento_producto_chk_1",
+      "CHECK_CLAUSE": "(`existencia_resultante` >= 0)"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "pago_chk_1",
+      "CHECK_CLAUSE": "(`importe` > 0)"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "pago_chk_2",
+      "CHECK_CLAUSE": "(((`id_pedido` is not null) and (`id_venta` is null)) or ((`id_pedido` is null) and (`id_venta` is not null)))"
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "pedido_chk_1",
+      "CHECK_CLAUSE": "(`total` >= 0)"
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "pedido_chk_2",
+      "CHECK_CLAUSE": "(`anticipo` >= 0)"
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "pedido_chk_3",
+      "CHECK_CLAUSE": "(`anticipo` <= `total`)"
+    },
+    {
+      "TABLE_NAME": "producto",
+      "CONSTRAINT_NAME": "producto_chk_1",
+      "CHECK_CLAUSE": "(`precio` >= 0)"
+    },
+    {
+      "TABLE_NAME": "producto",
+      "CONSTRAINT_NAME": "producto_chk_2",
+      "CHECK_CLAUSE": "(`existencia` >= 0)"
+    },
+    {
+      "TABLE_NAME": "producto",
+      "CONSTRAINT_NAME": "producto_chk_3",
+      "CHECK_CLAUSE": "(`stock_minimo` >= 0)"
+    },
+    {
+      "TABLE_NAME": "receta",
+      "CONSTRAINT_NAME": "receta_chk_1",
+      "CHECK_CLAUSE": "(`rendimiento` > 0)"
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "venta_chk_1",
+      "CHECK_CLAUSE": "(`total` >= 0)"
+    }
+  ],
+  "references": [
+    {
+      "TABLE_NAME": "compra",
+      "CONSTRAINT_NAME": "compra_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "compra",
+      "CONSTRAINT_NAME": "compra_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "config_bancaria",
+      "CONSTRAINT_NAME": "config_bancaria_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "CONSTRAINT_NAME": "detalle_compra_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "detalle_compra",
+      "CONSTRAINT_NAME": "detalle_compra_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "CONSTRAINT_NAME": "detalle_pedido_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "detalle_pedido",
+      "CONSTRAINT_NAME": "detalle_pedido_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "CONSTRAINT_NAME": "detalle_receta_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "detalle_receta",
+      "CONSTRAINT_NAME": "detalle_receta_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "CONSTRAINT_NAME": "detalle_venta_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "detalle_venta",
+      "CONSTRAINT_NAME": "detalle_venta_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "CONSTRAINT_NAME": "devolucion_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "devolucion",
+      "CONSTRAINT_NAME": "devolucion_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "CONSTRAINT_NAME": "historial_pedido_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "historial_pedido",
+      "CONSTRAINT_NAME": "historial_pedido_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_ibfk_3",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "intento_transferencia",
+      "CONSTRAINT_NAME": "intento_transferencia_ibfk_4",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_ibfk_3",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "movimiento_ingrediente",
+      "CONSTRAINT_NAME": "movimiento_ingrediente_ibfk_4",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "CONSTRAINT_NAME": "movimiento_producto_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "CONSTRAINT_NAME": "movimiento_producto_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "movimiento_producto",
+      "CONSTRAINT_NAME": "movimiento_producto_ibfk_3",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "notificacion_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "notificacion_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "notificacion",
+      "CONSTRAINT_NAME": "notificacion_ibfk_3",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "operacion",
+      "CONSTRAINT_NAME": "operacion_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "pago_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "pago_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "pago",
+      "CONSTRAINT_NAME": "pago_ibfk_3",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "pedido_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "pedido",
+      "CONSTRAINT_NAME": "pedido_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "producto",
+      "CONSTRAINT_NAME": "producto_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "receta",
+      "CONSTRAINT_NAME": "receta_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "CONSTRAINT_NAME": "referencia_pedido_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "referencia_pedido",
+      "CONSTRAINT_NAME": "referencia_pedido_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "transferencia_validada",
+      "CONSTRAINT_NAME": "transferencia_validada_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "usuario",
+      "CONSTRAINT_NAME": "usuario_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "fk_venta_cliente",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "venta_ibfk_1",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    },
+    {
+      "TABLE_NAME": "venta",
+      "CONSTRAINT_NAME": "venta_ibfk_2",
+      "UPDATE_RULE": "NO ACTION",
+      "DELETE_RULE": "NO ACTION"
+    }
+  ]
+}

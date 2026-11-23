@@ -1,0 +1,87 @@
+{
+  "responsive": [
+    {
+      "page": "admin.html#productos",
+      "headings": 1,
+      "missingImages": 0,
+      "scrollWidth": 1431,
+      "width": 1440
+    },
+    {
+      "page": "index.html#catalogo",
+      "headings": 1,
+      "missingImages": 0,
+      "scrollWidth": 1431,
+      "width": 1440
+    },
+    {
+      "page": "registro.html",
+      "headings": 1,
+      "missingImages": 0,
+      "scrollWidth": 1431,
+      "width": 1440
+    },
+    {
+      "page": "login.html",
+      "headings": 1,
+      "missingImages": 0,
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "page": "admin.html#productos",
+      "headings": 1,
+      "missingImages": 0,
+      "scrollWidth": 311,
+      "width": 320
+    },
+    {
+      "page": "index.html#catalogo",
+      "headings": 1,
+      "missingImages": 0,
+      "scrollWidth": 311,
+      "width": 320
+    },
+    {
+      "page": "registro.html",
+      "headings": 1,
+      "missingImages": 0,
+      "scrollWidth": 311,
+      "width": 320
+    },
+    {
+      "page": "login.html",
+      "headings": 1,
+      "missingImages": 0,
+      "scrollWidth": 311,
+      "width": 320
+    }
+  ],
+  "formularios": [
+    {
+      "pagina": "login",
+      "accion": "/api/auth/login",
+      "metodo": "post"
+    },
+    {
+      "pagina": "registro",
+      "accion": "/api/auth/registro",
+      "metodo": "post"
+    }
+  ],
+  "pruebasAisladas": [
+    "login administrador",
+    "alta con fotografía",
+    "detalle público",
+    "búsqueda",
+    "filtro por categoría"
+  ],
+  "mysqlReal": [
+    "conexión y esquema",
+    "migración",
+    "sesión anónima y cierre",
+    "administrador creado por usuario",
+    "acceso real confirmado por usuario",
+    "primer producto visible con foto"
+  ]
+}

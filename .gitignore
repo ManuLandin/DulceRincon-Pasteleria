@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+uploads/productos/*
+!uploads/productos/.gitkeep
+coverage/
+backups/
+uploads/referencias/
+*.log
+tmp/
+docs/manuales/qa/

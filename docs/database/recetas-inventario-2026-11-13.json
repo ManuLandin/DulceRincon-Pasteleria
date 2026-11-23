@@ -1,0 +1,379 @@
+{
+  "ingredientes": [
+    {
+      "nombre": "Harina",
+      "unidad": "kg",
+      "existencia": "3.000"
+    },
+    {
+      "nombre": "Fresas",
+      "unidad": "kg",
+      "existencia": "2.000"
+    },
+    {
+      "nombre": "Grenetina",
+      "unidad": "kg",
+      "existencia": "1.000"
+    },
+    {
+      "nombre": "Azúcar refinada",
+      "unidad": "kg",
+      "existencia": "25.000"
+    },
+    {
+      "nombre": "Mantequilla",
+      "unidad": "kg",
+      "existencia": "10.000"
+    },
+    {
+      "nombre": "Cacao",
+      "unidad": "kg",
+      "existencia": "3.000"
+    },
+    {
+      "nombre": "Chocolate semiamargo",
+      "unidad": "kg",
+      "existencia": "5.000"
+    },
+    {
+      "nombre": "Nuez",
+      "unidad": "kg",
+      "existencia": "2.000"
+    },
+    {
+      "nombre": "Avena",
+      "unidad": "kg",
+      "existencia": "5.000"
+    },
+    {
+      "nombre": "Queso crema",
+      "unidad": "kg",
+      "existencia": "4.000"
+    },
+    {
+      "nombre": "Galleta molida",
+      "unidad": "kg",
+      "existencia": "2.000"
+    },
+    {
+      "nombre": "Frutos rojos",
+      "unidad": "kg",
+      "existencia": "3.000"
+    },
+    {
+      "nombre": "Azúcar glas",
+      "unidad": "kg",
+      "existencia": "5.000"
+    },
+    {
+      "nombre": "Polvo para hornear",
+      "unidad": "kg",
+      "existencia": "1.000"
+    },
+    {
+      "nombre": "Sal",
+      "unidad": "kg",
+      "existencia": "1.000"
+    },
+    {
+      "nombre": "Maicena",
+      "unidad": "kg",
+      "existencia": "1.000"
+    },
+    {
+      "nombre": "Zanahoria",
+      "unidad": "kg",
+      "existencia": "4.000"
+    },
+    {
+      "nombre": "Leche entera",
+      "unidad": "litro",
+      "existencia": "20.000"
+    },
+    {
+      "nombre": "Crema para batir",
+      "unidad": "litro",
+      "existencia": "10.000"
+    },
+    {
+      "nombre": "Vainilla",
+      "unidad": "litro",
+      "existencia": "1.000"
+    },
+    {
+      "nombre": "Leche evaporada",
+      "unidad": "litro",
+      "existencia": "5.000"
+    },
+    {
+      "nombre": "Leche condensada",
+      "unidad": "litro",
+      "existencia": "3.000"
+    },
+    {
+      "nombre": "Yogur natural",
+      "unidad": "litro",
+      "existencia": "2.000"
+    },
+    {
+      "nombre": "Colorante rojo alimentario",
+      "unidad": "litro",
+      "existencia": "1.000"
+    },
+    {
+      "nombre": "Huevos",
+      "unidad": "pieza",
+      "existencia": "15.000"
+    },
+    {
+      "nombre": "Limones",
+      "unidad": "pieza",
+      "existencia": "12.000"
+    },
+    {
+      "nombre": "Vasitos para postre",
+      "unidad": "pieza",
+      "existencia": "10.000"
+    },
+    {
+      "nombre": "Capacillos para cupcakes",
+      "unidad": "pieza",
+      "existencia": "15.000"
+    }
+  ],
+  "recetas": {
+    "Pastel de Fresa con Crema": {
+      "Harina": "0.350",
+      "Azúcar refinada": "0.250",
+      "Mantequilla": "0.200",
+      "Huevos": "4.000",
+      "Leche entera": "0.180",
+      "Polvo para hornear": "0.010",
+      "Sal": "0.003",
+      "Vainilla": "0.008",
+      "Fresas": "0.500",
+      "Crema para batir": "0.600"
+    },
+    "Pastel de chocolate clásico": {
+      "Harina": "0.350",
+      "Azúcar refinada": "0.250",
+      "Mantequilla": "0.200",
+      "Huevos": "4.000",
+      "Leche entera": "0.180",
+      "Polvo para hornear": "0.010",
+      "Sal": "0.003",
+      "Vainilla": "0.008",
+      "Cacao": "0.070",
+      "Chocolate semiamargo": "0.350",
+      "Crema para batir": "0.350"
+    },
+    "Pastel de tres leches": {
+      "Harina": "0.350",
+      "Azúcar refinada": "0.250",
+      "Mantequilla": "0.200",
+      "Huevos": "4.000",
+      "Leche entera": "0.180",
+      "Polvo para hornear": "0.010",
+      "Sal": "0.003",
+      "Vainilla": "0.008",
+      "Leche evaporada": "0.350",
+      "Leche condensada": "0.350",
+      "Crema para batir": "0.400"
+    },
+    "Pastel de zanahoria y nuez": {
+      "Harina": "0.350",
+      "Azúcar refinada": "0.250",
+      "Mantequilla": "0.200",
+      "Huevos": "4.000",
+      "Leche entera": "0.180",
+      "Polvo para hornear": "0.010",
+      "Sal": "0.003",
+      "Vainilla": "0.008",
+      "Zanahoria": "0.350",
+      "Nuez": "0.120",
+      "Queso crema": "0.300",
+      "Azúcar glas": "0.100"
+    },
+    "Pastel red velvet": {
+      "Harina": "0.350",
+      "Azúcar refinada": "0.250",
+      "Mantequilla": "0.200",
+      "Huevos": "4.000",
+      "Leche entera": "0.180",
+      "Polvo para hornear": "0.010",
+      "Sal": "0.003",
+      "Vainilla": "0.008",
+      "Cacao": "0.040",
+      "Queso crema": "0.400",
+      "Azúcar glas": "0.100",
+      "Colorante rojo alimentario": "0.003"
+    },
+    "Pastel de celebración con frutos rojos": {
+      "Harina": "0.700",
+      "Azúcar refinada": "0.500",
+      "Mantequilla": "0.400",
+      "Huevos": "8.000",
+      "Leche entera": "0.360",
+      "Polvo para hornear": "0.020",
+      "Sal": "0.006",
+      "Vainilla": "0.016",
+      "Fresas": "0.400",
+      "Frutos rojos": "0.600",
+      "Crema para batir": "0.800"
+    },
+    "Galleta con trozos de chocolate": {
+      "Harina": "0.060",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.035",
+      "Huevos": "0.150",
+      "Vainilla": "0.001",
+      "Sal": "0.001",
+      "Polvo para hornear": "0.001",
+      "Chocolate semiamargo": "0.035"
+    },
+    "Galleta doble chocolate": {
+      "Harina": "0.060",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.035",
+      "Huevos": "0.150",
+      "Vainilla": "0.001",
+      "Sal": "0.001",
+      "Polvo para hornear": "0.001",
+      "Cacao": "0.015",
+      "Chocolate semiamargo": "0.035"
+    },
+    "Galleta de mantequilla": {
+      "Harina": "0.065",
+      "Mantequilla": "0.045",
+      "Azúcar glas": "0.020",
+      "Vainilla": "0.001",
+      "Sal": "0.001"
+    },
+    "Galleta de avena y nuez": {
+      "Harina": "0.030",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.035",
+      "Huevos": "0.150",
+      "Vainilla": "0.001",
+      "Sal": "0.001",
+      "Polvo para hornear": "0.001",
+      "Avena": "0.040",
+      "Nuez": "0.020"
+    },
+    "Galleta red velvet rellena": {
+      "Harina": "0.060",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.035",
+      "Huevos": "0.150",
+      "Vainilla": "0.001",
+      "Sal": "0.001",
+      "Polvo para hornear": "0.001",
+      "Cacao": "0.005",
+      "Colorante rojo alimentario": "0.001",
+      "Queso crema": "0.040"
+    },
+    "Cupcake de vainilla": {
+      "Harina": "0.035",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.045",
+      "Huevos": "0.250",
+      "Leche entera": "0.025",
+      "Vainilla": "0.001",
+      "Polvo para hornear": "0.001",
+      "Azúcar glas": "0.035",
+      "Capacillos para cupcakes": "1.000"
+    },
+    "Cupcake de chocolate": {
+      "Harina": "0.035",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.045",
+      "Huevos": "0.250",
+      "Leche entera": "0.025",
+      "Vainilla": "0.001",
+      "Polvo para hornear": "0.001",
+      "Azúcar glas": "0.035",
+      "Capacillos para cupcakes": "1.000",
+      "Cacao": "0.012",
+      "Chocolate semiamargo": "0.020"
+    },
+    "Cupcake de fresa": {
+      "Harina": "0.035",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.045",
+      "Huevos": "0.250",
+      "Leche entera": "0.025",
+      "Vainilla": "0.001",
+      "Polvo para hornear": "0.001",
+      "Azúcar glas": "0.035",
+      "Capacillos para cupcakes": "1.000",
+      "Fresas": "0.025"
+    },
+    "Cupcake red velvet": {
+      "Harina": "0.035",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.045",
+      "Huevos": "0.250",
+      "Leche entera": "0.025",
+      "Vainilla": "0.001",
+      "Polvo para hornear": "0.001",
+      "Azúcar glas": "0.035",
+      "Capacillos para cupcakes": "1.000",
+      "Cacao": "0.005",
+      "Colorante rojo alimentario": "0.001",
+      "Queso crema": "0.040"
+    },
+    "Cupcake de limón": {
+      "Harina": "0.035",
+      "Azúcar refinada": "0.025",
+      "Mantequilla": "0.045",
+      "Huevos": "0.250",
+      "Leche entera": "0.025",
+      "Vainilla": "0.001",
+      "Polvo para hornear": "0.001",
+      "Azúcar glas": "0.035",
+      "Capacillos para cupcakes": "1.000",
+      "Limones": "0.100"
+    },
+    "Vasito cremoso de fresa": {
+      "Fresas": "0.060",
+      "Yogur natural": "0.100",
+      "Crema para batir": "0.030",
+      "Azúcar refinada": "0.020",
+      "Vasitos para postre": "1.000"
+    },
+    "Flan individual de caramelo": {
+      "Leche entera": "0.100",
+      "Leche condensada": "0.040",
+      "Huevos": "0.500",
+      "Azúcar refinada": "0.025",
+      "Vainilla": "0.001",
+      "Vasitos para postre": "1.000"
+    },
+    "Tartaleta de frutos rojos": {
+      "Harina": "0.070",
+      "Mantequilla": "0.040",
+      "Azúcar refinada": "0.025",
+      "Huevos": "0.250",
+      "Frutos rojos": "0.100",
+      "Maicena": "0.008"
+    },
+    "Brownie de chocolate y nuez": {
+      "Harina": "0.040",
+      "Cacao": "0.015",
+      "Chocolate semiamargo": "0.050",
+      "Mantequilla": "0.040",
+      "Azúcar refinada": "0.040",
+      "Huevos": "0.500",
+      "Nuez": "0.020"
+    },
+    "Cheesecake individual de frutos rojos": {
+      "Queso crema": "0.120",
+      "Galleta molida": "0.040",
+      "Mantequilla": "0.020",
+      "Crema para batir": "0.040",
+      "Azúcar refinada": "0.025",
+      "Grenetina": "0.003",
+      "Frutos rojos": "0.050"
+    }
+  }
+}

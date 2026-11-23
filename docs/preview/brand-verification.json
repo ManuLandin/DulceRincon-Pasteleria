@@ -1,0 +1,168 @@
+[
+  {
+    "page": "login",
+    "brokenLogos": 0,
+    "logoCount": 1,
+    "logos": [
+      {
+        "height": 59,
+        "width": 200
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Iniciar sesión · Dulce Rincón",
+    "width": 1440
+  },
+  {
+    "page": "cliente",
+    "brokenLogos": 0,
+    "logoCount": 2,
+    "logos": [
+      {
+        "height": 59,
+        "width": 200
+      },
+      {
+        "height": 63,
+        "width": 215
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Tu rincón dulce · Dulce Rincón",
+    "width": 1440
+  },
+  {
+    "page": "trabajador",
+    "brokenLogos": 0,
+    "logoCount": 1,
+    "logos": [
+      {
+        "height": 52,
+        "width": 178
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Mi jornada · Dulce Rincón",
+    "width": 1440
+  },
+  {
+    "page": "admin",
+    "brokenLogos": 0,
+    "logoCount": 1,
+    "logos": [
+      {
+        "height": 52,
+        "width": 178
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Administración · Dulce Rincón",
+    "width": 1440
+  },
+  {
+    "page": "index",
+    "brokenLogos": 0,
+    "logoCount": 2,
+    "logos": [
+      {
+        "height": 59,
+        "width": 200
+      },
+      {
+        "height": 63,
+        "width": 215
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Dulce Rincón · El lado dulce de celebrar",
+    "width": 1440
+  },
+  {
+    "page": "login",
+    "brokenLogos": 0,
+    "logoCount": 1,
+    "logos": [
+      {
+        "height": 44,
+        "width": 148
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Iniciar sesión · Dulce Rincón",
+    "width": 320
+  },
+  {
+    "page": "cliente",
+    "brokenLogos": 0,
+    "logoCount": 2,
+    "logos": [
+      {
+        "height": 47,
+        "width": 159
+      },
+      {
+        "height": 60,
+        "width": 205
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Tu rincón dulce · Dulce Rincón",
+    "width": 320
+  },
+  {
+    "page": "trabajador",
+    "brokenLogos": 0,
+    "logoCount": 1,
+    "logos": [
+      {
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Mi jornada · Dulce Rincón",
+    "width": 320
+  },
+  {
+    "page": "admin",
+    "brokenLogos": 0,
+    "logoCount": 1,
+    "logos": [
+      {
+        "height": 0,
+        "width": 0
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Administración · Dulce Rincón",
+    "width": 320
+  },
+  {
+    "page": "index",
+    "brokenLogos": 0,
+    "logoCount": 2,
+    "logos": [
+      {
+        "height": 47,
+        "width": 159
+      },
+      {
+        "height": 60,
+        "width": 205
+      }
+    ],
+    "oldBrand": false,
+    "overflow": false,
+    "title": "Dulce Rincón · El lado dulce de celebrar",
+    "width": 320
+  }
+]

@@ -1,0 +1,23 @@
+# Progreso: 2026-11-03-backend.md
+
+- Especificación aprobada por el usuario.
+- Ejecución local en esta carpeta, sin Git. No modificar la BD hasta disponer de configuración local.
+- Task 1: completa. Hash Argon2id, validaciones y alias; 6 pruebas iniciales pasaron tras fallo por módulos inexistentes.
+- Task 2: API y repositorio implementados; 20 pruebas de núcleo/HTTP/SQL pasan. Se añadieron comprobaciones para el adaptador de sesiones.
+- Decisión: sustituir express-mysql-session por un adaptador del contrato express-session.Store que utiliza el mysql2 actualizado ya instalado. El paquete anterior fijaba un mysql2 vulnerable y npm no actualizó su copia con overrides. Misma arquitectura y tabla SESION_WEB; se evita introducir ese driver antiguo. Coste: mantener y probar el adaptador de unas 30 líneas.
+- Auditoría tras retirar ese paquete: 0 vulnerabilidades.
+- .env creado con secreto de sesión aleatorio. DB_PASSWORD aún es CONFIGURAR_LOCALMENTE; se solicitó al usuario que lo complete localmente.
+- Task 3: scripts y formularios conectados; revisión de navegador pendiente.
+- QA de navegador usará temporalmente tests/preview-server.js (repositorio en memoria y archivos temporales), identificado como pruebas aisladas sin conexión a MySQL. No se insertarán registros inventados en pasteleria_db.
+- Task 3: interfaz conectada. En navegador aislado se verificaron acceso de administrador, alta con archivo real, ficha, búsqueda sin coincidencias y cambio de categoría.
+- 8 capturas a 1440/320 px (alta, catálogo, registro, acceso): sin desbordamientos, imágenes ausentes ni errores de consola. Capturas en docs/preview/backend-2026-11-03/.
+- El usuario completó DB_PASSWORD localmente. Conexión y roles reales verificados, migración aplicada sin eliminar registros.
+- Sesión anónima real: creación y cierre correctos mediante MySQL.
+- Fallo descubierto en integración real: el repositorio revalidaba la categoría null normalizada y rechazaba el catálogo sin filtro. Se añadió una prueba que falló, se aceptó null como ausencia de filtro y pasó. Tras reinicio, /api/productos respondió 200 y total 0.
+- El usuario creó el primer administrador en una terminal visible y confirmó que pudo entrar al panel real. No se compartió ni consultó su contraseña.
+- El usuario creó «Pastel de Fresa con Crema» desde su administrador real. Se comprobó por navegador el registro público: nombre, descripción, precio $450.00 y fotografía cargada. No se insertaron productos de ejemplo en su BD.
+- README actualizado para usar Express en puerto 3000; ya no file:// o Python.
+- Revisión independiente: sin críticos; un hallazgo importante en el envío nativo de formularios sin JavaScript. Reproducción en navegador: method=get en ambos formularios. Se corrigió a POST con acciones explícitas /api/auth/login y /api/auth/registro. Verificación del DOM nativo: ambos method=post; suite completa 22/22. Sin hallazgos menores pendientes.
+- Catálogo y ficha del producto REAL comprobados en navegador, con fotografía cargada y precio de la BD. Evidencia: catalogo-real.png, producto-real.png y verification.json en docs/preview/backend-2026-11-03/.
+- Task 4: completa. Conexión/migración/sesiones reales verificadas; cuenta inicial y primer producto creados por el usuario; revisión final atendida.
+- Mantener el servidor REAL en http://127.0.0.1:3000 para la revisión del usuario. Detener únicamente el servidor aislado de QA en el puerto 3001.

@@ -1,0 +1,249 @@
+{
+  "base": "pasteleria_db",
+  "productos": [
+    {
+      "categoria": "Pasteles",
+      "nombre": "Pastel de chocolate clásico",
+      "descripcion": "Bizcocho de chocolate con cobertura cremosa y ganache. Fotografía ilustrativa.",
+      "precio": "450.00",
+      "existencia": 15,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "hero-cake.jpg"
+    },
+    {
+      "categoria": "Pasteles",
+      "nombre": "Pastel de tres leches",
+      "descripcion": "Bizcocho húmedo de tres leches con crema batida. Fotografía ilustrativa.",
+      "precio": "650.00",
+      "existencia": 10,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "tres_leches"
+    },
+    {
+      "categoria": "Pasteles",
+      "nombre": "Pastel de zanahoria y nuez",
+      "descripcion": "Bizcocho de zanahoria con nuez y cobertura de queso crema. Fotografía ilustrativa.",
+      "precio": "850.00",
+      "existencia": 5,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "zanahoria"
+    },
+    {
+      "categoria": "Pasteles",
+      "nombre": "Pastel red velvet",
+      "descripcion": "Bizcocho rojo de cacao suave con cobertura de queso crema. Fotografía ilustrativa.",
+      "precio": "1100.00",
+      "existencia": 1,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "pastel_red_velvet"
+    },
+    {
+      "categoria": "Pasteles",
+      "nombre": "Pastel de celebración con frutos rojos",
+      "descripcion": "Pastel de celebración decorado con crema y frutos rojos. Fotografía ilustrativa.",
+      "precio": "1500.00",
+      "existencia": 0,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "pink-cake.jpg"
+    },
+    {
+      "categoria": "Galletas",
+      "nombre": "Galleta con trozos de chocolate",
+      "descripcion": "Galleta artesanal con trozos de chocolate semiamargo. Fotografía ilustrativa.",
+      "precio": "50.00",
+      "existencia": 15,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "cookies.jpg"
+    },
+    {
+      "categoria": "Galletas",
+      "nombre": "Galleta doble chocolate",
+      "descripcion": "Galleta de cacao con abundantes trozos de chocolate. Fotografía ilustrativa.",
+      "precio": "65.00",
+      "existencia": 10,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "galleta_chocolate"
+    },
+    {
+      "categoria": "Galletas",
+      "nombre": "Galleta de mantequilla",
+      "descripcion": "Galleta artesanal de mantequilla con acabado dorado. Fotografía ilustrativa.",
+      "precio": "85.00",
+      "existencia": 5,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "galleta_mantequilla"
+    },
+    {
+      "categoria": "Galletas",
+      "nombre": "Galleta de avena y nuez",
+      "descripcion": "Galleta de avena con nuez y textura crujiente. Fotografía ilustrativa.",
+      "precio": "105.00",
+      "existencia": 1,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "galleta_avena"
+    },
+    {
+      "categoria": "Galletas",
+      "nombre": "Galleta red velvet rellena",
+      "descripcion": "Galleta red velvet con centro cremoso de queso. Fotografía ilustrativa.",
+      "precio": "125.00",
+      "existencia": 0,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "galleta_red_velvet"
+    },
+    {
+      "categoria": "Cupcakes",
+      "nombre": "Cupcake de vainilla",
+      "descripcion": "Cupcake de vainilla con betún y chispas de colores. Fotografía ilustrativa.",
+      "precio": "35.00",
+      "existencia": 15,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "cupcakes.jpg"
+    },
+    {
+      "categoria": "Cupcakes",
+      "nombre": "Cupcake de chocolate",
+      "descripcion": "Cupcake de chocolate con betún de chocolate. Fotografía ilustrativa.",
+      "precio": "45.00",
+      "existencia": 10,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "cupcake_chocolate"
+    },
+    {
+      "categoria": "Cupcakes",
+      "nombre": "Cupcake de fresa",
+      "descripcion": "Cupcake de vainilla con betún de fresa y fruta. Fotografía ilustrativa.",
+      "precio": "55.00",
+      "existencia": 5,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "cupcake_fresa"
+    },
+    {
+      "categoria": "Cupcakes",
+      "nombre": "Cupcake red velvet",
+      "descripcion": "Cupcake red velvet con betún de queso crema. Fotografía ilustrativa.",
+      "precio": "70.00",
+      "existencia": 1,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "cupcake_red_velvet"
+    },
+    {
+      "categoria": "Cupcakes",
+      "nombre": "Cupcake de limón",
+      "descripcion": "Cupcake de limón con betún suave y ralladura cítrica. Fotografía ilustrativa.",
+      "precio": "85.00",
+      "existencia": 0,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "cupcake_limon"
+    },
+    {
+      "categoria": "Postres",
+      "nombre": "Vasito cremoso de fresa",
+      "descripcion": "Postre individual de crema con fresas frescas. Fotografía ilustrativa.",
+      "precio": "25.00",
+      "existencia": 15,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "berry-dessert.jpg"
+    },
+    {
+      "categoria": "Postres",
+      "nombre": "Flan individual de caramelo",
+      "descripcion": "Flan individual de vainilla con caramelo. Fotografía ilustrativa.",
+      "precio": "50.00",
+      "existencia": 10,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "flan"
+    },
+    {
+      "categoria": "Postres",
+      "nombre": "Tartaleta de frutos rojos",
+      "descripcion": "Tartaleta individual de masa dorada y frutos rojos. Fotografía ilustrativa.",
+      "precio": "85.00",
+      "existencia": 5,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "pastry.jpg"
+    },
+    {
+      "categoria": "Postres",
+      "nombre": "Brownie de chocolate y nuez",
+      "descripcion": "Brownie individual de chocolate con nueces. Fotografía ilustrativa.",
+      "precio": "125.00",
+      "existencia": 1,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "brownie"
+    },
+    {
+      "categoria": "Postres",
+      "nombre": "Cheesecake individual de frutos rojos",
+      "descripcion": "Cheesecake individual con base de galleta y frutos rojos. Fotografía ilustrativa.",
+      "precio": "200.00",
+      "existencia": 0,
+      "stock_minimo": 2,
+      "unidad": "pieza",
+      "fuente": "cheesecake"
+    }
+  ],
+  "proveedores": [
+    {
+      "nombre": "Molinos de la Casa (Ejemplo)",
+      "correo": "proveedor1.dulcerincon@example.test",
+      "telefono": "0000000000",
+      "direccion": "Domicilio ficticio de proveedor 1"
+    },
+    {
+      "nombre": "Lácteos del Obrador (Ejemplo)",
+      "correo": "proveedor2.dulcerincon@example.test",
+      "telefono": "0000000000",
+      "direccion": "Domicilio ficticio de proveedor 2"
+    },
+    {
+      "nombre": "Frutas y Sabores (Ejemplo)",
+      "correo": "proveedor3.dulcerincon@example.test",
+      "telefono": "0000000000",
+      "direccion": "Domicilio ficticio de proveedor 3"
+    },
+    {
+      "nombre": "Cacao Selecto (Ejemplo)",
+      "correo": "proveedor4.dulcerincon@example.test",
+      "telefono": "0000000000",
+      "direccion": "Domicilio ficticio de proveedor 4"
+    },
+    {
+      "nombre": "Esencias y Vainilla (Ejemplo)",
+      "correo": "proveedor5.dulcerincon@example.test",
+      "telefono": "0000000000",
+      "direccion": "Domicilio ficticio de proveedor 5"
+    },
+    {
+      "nombre": "Empaques para Repostería (Ejemplo)",
+      "correo": "proveedor6.dulcerincon@example.test",
+      "telefono": "0000000000",
+      "direccion": "Domicilio ficticio de proveedor 6"
+    },
+    {
+      "nombre": "Insumos Dulce Horno (Ejemplo)",
+      "correo": "proveedor7.dulcerincon@example.test",
+      "telefono": "0000000000",
+      "direccion": "Domicilio ficticio de proveedor 7"
+    }
+  ]
+}

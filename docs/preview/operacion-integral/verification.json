@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-06",
+  "scope": "Operacion integral aprobada",
+  "general_tests": {
+    "passed": 63,
+    "failed": 0,
+    "mysql_skipped_by_default": 11
+  },
+  "mysql_isolated_tests": {
+    "passed": 11,
+    "failed": 0,
+    "real_business_rows_used": false
+  },
+  "audit_vulnerabilities": 0,
+  "browser_checks": [
+    "Venta asociada por correo y comprobante con cambio",
+    "Preventa con importe servidor y disponibilidad",
+    "Alta de ingrediente con existencia inicial",
+    "Formulario exclusivo de trabajador",
+    "Detalle de compra pendiente corregible",
+    "Cotizacion de personalizado por trabajador",
+    "Aceptacion de cotizacion por cliente",
+    "Solicitud personalizada nueva sin ingredientes",
+    "Dialogo cierra con Escape"
+  ],
+  "responsive": {
+    "width": 320,
+    "cash_document_scroll_width": 311,
+    "custom_document_scroll_width": 311,
+    "viewport_reset": true
+  },
+  "real_server": {
+    "url": "http://127.0.0.1:3000",
+    "home": 200,
+    "login": 200,
+    "catalog": 200,
+    "operation_without_session": 401
+  },
+  "real_database": "Migracion con respaldo aplicado sin registros de prueba",
+  "review": "Independiente; hallazgos criticos/importantes corregidos con regresiones",
+  "screenshots": "Datos de prueba QA exclusivamente",
+  "cleanup": "4 bases temporales de QA eliminadas; servidor QA detenido; servidor real permanece iniciado",
+  "final_combined_run": {
+    "passed": 74,
+    "failed": 0,
+    "skipped": 0,
+    "duration_ms": 51756.3797
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "dulce-rincon",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "dev": "node --env-file-if-exists=.env --watch server/index.js",
+    "configurar": "node scripts/prepare-config.js",
+    "db:check": "node --env-file-if-exists=.env scripts/db-check.js",
+    "db:migrate": "node --env-file-if-exists=.env scripts/migrate.js",
+    "crear-admin": "node --env-file-if-exists=.env scripts/create-admin.js",
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "db:operacion": "node --env-file-if-exists=.env scripts/migrate-operation.js",
+    "db:backup": "node --env-file-if-exists=.env scripts/backup.js",
+    "db:notificaciones": "node --env-file-if-exists=.env scripts/migrate-notifications.js",
+    "test:mysql": "node --env-file-if-exists=.env --test --test-concurrency=1 tests/operation-mysql.test.js tests/notification-mysql.test.js",
+    "db:seed": "node --env-file-if-exists=.env scripts/seed.js seed",
+    "db:seed:verify": "node --env-file-if-exists=.env scripts/seed.js verify",
+    "db:seed:undo": "node --env-file-if-exists=.env scripts/seed.js undo",
+    "db:inspect": "node --env-file-if-exists=.env scripts/inspect-schema.js",
+    "demo": "node --env-file-if-exists=.env scripts/start-demo.js"
+  },
+  "dependencies": {
+    "argon2": "^0.45.2",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.3",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0",
+    "multer": "^2.5.0",
+    "mysql2": "^3.24.6",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1"
+  }
+}

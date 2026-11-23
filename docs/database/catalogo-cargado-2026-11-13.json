@@ -1,0 +1,195 @@
+{
+  "base": "pasteleria_db",
+  "productos": [
+    {
+      "id": 2,
+      "nombre": "Pastel de chocolate clásico",
+      "categoria": "Pasteles",
+      "precio": "450.00",
+      "existencia": 15,
+      "imagen": "/uploads/productos/ba253027-9c69-41a2-87aa-c65fd497e0ed.webp"
+    },
+    {
+      "id": 3,
+      "nombre": "Pastel de tres leches",
+      "categoria": "Pasteles",
+      "precio": "650.00",
+      "existencia": 10,
+      "imagen": "/uploads/productos/2e382da2-f805-48ab-b9c0-5a5557b1c6d9.webp"
+    },
+    {
+      "id": 4,
+      "nombre": "Pastel de zanahoria y nuez",
+      "categoria": "Pasteles",
+      "precio": "850.00",
+      "existencia": 5,
+      "imagen": "/uploads/productos/56bf6d38-7943-406e-b64d-7c36f28c0c70.webp"
+    },
+    {
+      "id": 5,
+      "nombre": "Pastel red velvet",
+      "categoria": "Pasteles",
+      "precio": "1100.00",
+      "existencia": 1,
+      "imagen": "/uploads/productos/b8036e68-d2c6-4155-9b71-7895d44987ff.webp"
+    },
+    {
+      "id": 6,
+      "nombre": "Pastel de celebración con frutos rojos",
+      "categoria": "Pasteles",
+      "precio": "1500.00",
+      "existencia": 0,
+      "imagen": "/uploads/productos/0ee7998f-3a30-481f-8807-2224039a70e7.webp"
+    },
+    {
+      "id": 7,
+      "nombre": "Galleta con trozos de chocolate",
+      "categoria": "Galletas",
+      "precio": "50.00",
+      "existencia": 15,
+      "imagen": "/uploads/productos/f8ec1b51-cbcc-4a38-b173-5bcac643f78f.webp"
+    },
+    {
+      "id": 8,
+      "nombre": "Galleta doble chocolate",
+      "categoria": "Galletas",
+      "precio": "65.00",
+      "existencia": 10,
+      "imagen": "/uploads/productos/f1a41520-4c9e-47ec-9bbc-539d3c3c330c.webp"
+    },
+    {
+      "id": 9,
+      "nombre": "Galleta de mantequilla",
+      "categoria": "Galletas",
+      "precio": "85.00",
+      "existencia": 5,
+      "imagen": "/uploads/productos/3b329a53-33e2-43d6-9b79-8d5ac246c611.webp"
+    },
+    {
+      "id": 10,
+      "nombre": "Galleta de avena y nuez",
+      "categoria": "Galletas",
+      "precio": "105.00",
+      "existencia": 1,
+      "imagen": "/uploads/productos/d14ed020-04d7-42a5-b7e6-6918d439fdba.webp"
+    },
+    {
+      "id": 11,
+      "nombre": "Galleta red velvet rellena",
+      "categoria": "Galletas",
+      "precio": "125.00",
+      "existencia": 0,
+      "imagen": "/uploads/productos/d35d70f3-0c1b-4d5e-b903-23cd492a9c70.webp"
+    },
+    {
+      "id": 12,
+      "nombre": "Cupcake de vainilla",
+      "categoria": "Cupcakes",
+      "precio": "35.00",
+      "existencia": 15,
+      "imagen": "/uploads/productos/c0878010-598c-491a-8ef9-e7bd75ecac18.webp"
+    },
+    {
+      "id": 13,
+      "nombre": "Cupcake de chocolate",
+      "categoria": "Cupcakes",
+      "precio": "45.00",
+      "existencia": 10,
+      "imagen": "/uploads/productos/482f63dd-cac7-425d-bcac-0df6dfa8e1ad.webp"
+    },
+    {
+      "id": 14,
+      "nombre": "Cupcake de fresa",
+      "categoria": "Cupcakes",
+      "precio": "55.00",
+      "existencia": 5,
+      "imagen": "/uploads/productos/5537e9fb-4074-4969-a7c7-594c4009a369.webp"
+    },
+    {
+      "id": 15,
+      "nombre": "Cupcake red velvet",
+      "categoria": "Cupcakes",
+      "precio": "70.00",
+      "existencia": 1,
+      "imagen": "/uploads/productos/48231dec-b9df-41c7-8058-685c6e73fdac.webp"
+    },
+    {
+      "id": 16,
+      "nombre": "Cupcake de limón",
+      "categoria": "Cupcakes",
+      "precio": "85.00",
+      "existencia": 0,
+      "imagen": "/uploads/productos/d8d0a74e-50b0-4468-b1c1-5f3d8adb5c33.webp"
+    },
+    {
+      "id": 17,
+      "nombre": "Vasito cremoso de fresa",
+      "categoria": "Postres",
+      "precio": "25.00",
+      "existencia": 15,
+      "imagen": "/uploads/productos/e1c91aec-f990-43da-9784-fa7740cd0e7e.webp"
+    },
+    {
+      "id": 18,
+      "nombre": "Flan individual de caramelo",
+      "categoria": "Postres",
+      "precio": "50.00",
+      "existencia": 10,
+      "imagen": "/uploads/productos/58518359-998f-426d-9bc7-3417fccc58e5.webp"
+    },
+    {
+      "id": 19,
+      "nombre": "Tartaleta de frutos rojos",
+      "categoria": "Postres",
+      "precio": "85.00",
+      "existencia": 5,
+      "imagen": "/uploads/productos/432a83ea-80bc-4cb2-8981-e407a7bb604a.webp"
+    },
+    {
+      "id": 20,
+      "nombre": "Brownie de chocolate y nuez",
+      "categoria": "Postres",
+      "precio": "125.00",
+      "existencia": 1,
+      "imagen": "/uploads/productos/79b09a0c-7bd4-41af-a4ff-064ead1d566e.webp"
+    },
+    {
+      "id": 21,
+      "nombre": "Cheesecake individual de frutos rojos",
+      "categoria": "Postres",
+      "precio": "200.00",
+      "existencia": 0,
+      "imagen": "/uploads/productos/287bc75e-2c68-4fb8-9c40-71e9b5c1e2c0.webp"
+    }
+  ],
+  "proveedores": [
+    {
+      "id": 2,
+      "nombre": "Molinos de la Casa (Ejemplo)"
+    },
+    {
+      "id": 3,
+      "nombre": "Lácteos del Obrador (Ejemplo)"
+    },
+    {
+      "id": 4,
+      "nombre": "Frutas y Sabores (Ejemplo)"
+    },
+    {
+      "id": 5,
+      "nombre": "Cacao Selecto (Ejemplo)"
+    },
+    {
+      "id": 6,
+      "nombre": "Esencias y Vainilla (Ejemplo)"
+    },
+    {
+      "id": 7,
+      "nombre": "Empaques para Repostería (Ejemplo)"
+    },
+    {
+      "id": 8,
+      "nombre": "Insumos Dulce Horno (Ejemplo)"
+    }
+  ]
+}

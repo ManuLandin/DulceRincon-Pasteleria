@@ -1,0 +1,140 @@
+{
+  "base": "pasteleria_db",
+  "ingredientes_nuevos": [
+    "Azúcar refinada",
+    "Mantequilla",
+    "Cacao",
+    "Chocolate semiamargo",
+    "Nuez",
+    "Avena",
+    "Queso crema",
+    "Galleta molida",
+    "Frutos rojos",
+    "Azúcar glas",
+    "Polvo para hornear",
+    "Sal",
+    "Maicena",
+    "Zanahoria",
+    "Leche entera",
+    "Crema para batir",
+    "Vainilla",
+    "Leche evaporada",
+    "Leche condensada",
+    "Yogur natural",
+    "Colorante rojo alimentario",
+    "Huevos",
+    "Limones",
+    "Vasitos para postre",
+    "Capacillos para cupcakes"
+  ],
+  "ingredientes_repuestos": [
+    "Grenetina"
+  ],
+  "recetas_agregadas": [
+    {
+      "producto": "Pastel de Fresa con Crema",
+      "id_receta": 1,
+      "ingredientes": 10
+    },
+    {
+      "producto": "Pastel de chocolate clásico",
+      "id_receta": 2,
+      "ingredientes": 11
+    },
+    {
+      "producto": "Pastel de tres leches",
+      "id_receta": 3,
+      "ingredientes": 11
+    },
+    {
+      "producto": "Pastel de zanahoria y nuez",
+      "id_receta": 4,
+      "ingredientes": 12
+    },
+    {
+      "producto": "Pastel red velvet",
+      "id_receta": 5,
+      "ingredientes": 12
+    },
+    {
+      "producto": "Pastel de celebración con frutos rojos",
+      "id_receta": 6,
+      "ingredientes": 11
+    },
+    {
+      "producto": "Galleta con trozos de chocolate",
+      "id_receta": 7,
+      "ingredientes": 8
+    },
+    {
+      "producto": "Galleta doble chocolate",
+      "id_receta": 8,
+      "ingredientes": 9
+    },
+    {
+      "producto": "Galleta de mantequilla",
+      "id_receta": 9,
+      "ingredientes": 5
+    },
+    {
+      "producto": "Galleta de avena y nuez",
+      "id_receta": 10,
+      "ingredientes": 9
+    },
+    {
+      "producto": "Galleta red velvet rellena",
+      "id_receta": 11,
+      "ingredientes": 10
+    },
+    {
+      "producto": "Cupcake de vainilla",
+      "id_receta": 12,
+      "ingredientes": 9
+    },
+    {
+      "producto": "Cupcake de chocolate",
+      "id_receta": 13,
+      "ingredientes": 11
+    },
+    {
+      "producto": "Cupcake de fresa",
+      "id_receta": 14,
+      "ingredientes": 10
+    },
+    {
+      "producto": "Cupcake red velvet",
+      "id_receta": 15,
+      "ingredientes": 12
+    },
+    {
+      "producto": "Cupcake de limón",
+      "id_receta": 16,
+      "ingredientes": 10
+    },
+    {
+      "producto": "Vasito cremoso de fresa",
+      "id_receta": 17,
+      "ingredientes": 5
+    },
+    {
+      "producto": "Flan individual de caramelo",
+      "id_receta": 18,
+      "ingredientes": 6
+    },
+    {
+      "producto": "Tartaleta de frutos rojos",
+      "id_receta": 19,
+      "ingredientes": 6
+    },
+    {
+      "producto": "Brownie de chocolate y nuez",
+      "id_receta": 20,
+      "ingredientes": 7
+    },
+    {
+      "producto": "Cheesecake individual de frutos rojos",
+      "id_receta": 21,
+      "ingredientes": 7
+    }
+  ]
+}

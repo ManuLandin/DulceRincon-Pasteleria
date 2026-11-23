@@ -1,0 +1,164 @@
+{
+  "final": [
+    {
+      "page": "index",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 1440
+    },
+    {
+      "page": "login",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 1440
+    },
+    {
+      "page": "cliente",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 1440
+    },
+    {
+      "page": "trabajador",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 1440
+    },
+    {
+      "page": "admin",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 1440
+    },
+    {
+      "page": "index",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 320
+    },
+    {
+      "page": "login",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 320
+    },
+    {
+      "page": "cliente",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 320
+    },
+    {
+      "page": "trabajador",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 320
+    },
+    {
+      "page": "admin",
+      "missingIcons": 0,
+      "missingImages": 0,
+      "overflow": false,
+      "prototypeLabelVisible": true,
+      "width": 320
+    }
+  ],
+  "intermediate": [
+    {
+      "page": "index",
+      "missingGlyphs": [
+        "ti ti-whisk"
+      ],
+      "scrollWidth": 759,
+      "width": 768
+    },
+    {
+      "page": "login",
+      "missingGlyphs": [],
+      "scrollWidth": 759,
+      "width": 768
+    },
+    {
+      "page": "cliente",
+      "missingGlyphs": [],
+      "scrollWidth": 759,
+      "width": 768
+    },
+    {
+      "page": "trabajador",
+      "missingGlyphs": [
+        "ti ti-whisk"
+      ],
+      "scrollWidth": 759,
+      "width": 768
+    },
+    {
+      "page": "admin",
+      "missingGlyphs": [],
+      "scrollWidth": 759,
+      "width": 768
+    },
+    {
+      "page": "index",
+      "missingGlyphs": [
+        "ti ti-whisk"
+      ],
+      "scrollWidth": 1015,
+      "width": 1024
+    },
+    {
+      "page": "login",
+      "missingGlyphs": [],
+      "scrollWidth": 1015,
+      "width": 1024
+    },
+    {
+      "page": "cliente",
+      "missingGlyphs": [],
+      "scrollWidth": 1015,
+      "width": 1024
+    },
+    {
+      "page": "trabajador",
+      "missingGlyphs": [
+        "ti ti-whisk"
+      ],
+      "scrollWidth": 1015,
+      "width": 1024
+    },
+    {
+      "page": "admin",
+      "missingGlyphs": [],
+      "scrollWidth": 1015,
+      "width": 1024
+    }
+  ],
+  "interactionChecks": {
+    "publicMenu": true,
+    "adminMenu": true,
+    "workerMenu": true,
+    "escapeClosesMenu": true,
+    "workerUsersLinkCount": 0,
+    "passwordVisibility": true,
+    "loginSendsNothing": true,
+    "customerOrders": true
+  }
+}
